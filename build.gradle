@@ -1,0 +1,44 @@
+buildscript {
+	ext {
+		springBootVersion = '1.5.4.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	// Spring
+	//compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('org.springframework.boot:spring-boot-starter-data-redis')
+
+	// DB
+	//compile('org.flywaydb:flyway-core')
+	compile('org.springframework.boot:spring-boot-starter-jdbc')
+	runtime('mysql:mysql-connector-java')
+	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.3.0')
+
+	compile group: 'mysql', name: 'mysql-connector-java', version: '6.0.6'
+
+
+	// 実装関連
+	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compileOnly('org.projectlombok:lombok')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}

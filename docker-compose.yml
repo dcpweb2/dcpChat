@@ -1,0 +1,38 @@
+# dcpChat
+version: '2'
+services:
+
+#開発用mysqlコンテナ(Spider)
+  db:
+    image: mysql
+    ports:
+      - "33060:3306"
+    volumes_from:
+      - dbdata
+    environment:
+      - MYSQL_ROOT_PASSWORD=pw
+      - MYSQL_DATABASE=dcpchat_db
+      - MYSQL_USER=dcpchatus
+      - MYSQL_PASSWORD=dcpchatpw
+    networks:
+      - front
+
+#Redisコンテナ
+  redis:
+    image: redis
+    ports:
+      - "63790:6379"
+    networks:
+      - front
+
+#DB & Redisデータ永続化用コンテナ
+  dbdata:
+    image: busybox
+    volumes:
+      - /var/lib/mysql
+    networks:
+      - front
+
+networks:
+  front:
+    driver: bridge
