@@ -1,8 +1,11 @@
 <!-- sample.jsp -->
 <html xmlns:th="http://www.thymeleaf.org">
 <link href="resources/static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"></link>
+<link href="resources/static/css/commmon.css" th:href="@{/css/common.css}" rel="stylesheet"></link>
 <script src="resources/static/js/jquery-3.2.1.min.js" th:src="@{/js/jquery-3.2.1.min.js}"></script>
 <script src="resources/static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
+<script src="resources/static/js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
+
 <head>
 <title>Home</title>
 </head>
