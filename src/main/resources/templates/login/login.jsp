@@ -1,9 +1,8 @@
 <!-- sample.jsp -->
 <html xmlns:th="http://www.thymeleaf.org">
-<!-- Bootstrap core CSS -->
-<link href="resources/css/bootstrap-3.3.2-dist/bootstrap.min.css" rel="stylesheet" />
-<!-- Custom styles for this template -->
-<link href="resources/css/signin.css" rel="stylesheet" />
+<link href="resources/static/css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"></link>
+<script src="resources/static/js/jquery-3.2.1.min.js" th:src="@{/js/jquery-3.2.1.min.js}"></script>
+<script src="resources/static/js/bootstrap.min.js" th:src="@{/js/bootstrap.min.js}"></script>
 <head>
 <title>Home</title>
 </head>
@@ -12,10 +11,10 @@
     <div class="container">
         <form>
             <div class="form-group">
-                <label>name</label> <input type="text" name="email" class="form-control"/>
+                <label>name</label> <input type="text" name="email" class="form-control" />
             </div>
             <div class="form-group">
-                <label>password</label> <input type="text" name="password" class="form-control"/>
+                <label>password</label> <input type="text" name="password" class="form-control" />
             </div>
             <button type="submit">ログイン</button>
         </form>
