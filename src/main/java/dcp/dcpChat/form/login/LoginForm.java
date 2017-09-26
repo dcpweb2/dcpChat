@@ -3,6 +3,11 @@ package dcp.dcpChat.form.login;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
+/**
+ * ログイン画面のFormクラス
+ * @author inokoichi
+ *
+ */
 public class LoginForm {
 
     @NotNull
