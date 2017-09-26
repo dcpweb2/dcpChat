@@ -1,4 +1,4 @@
-  <!-- sample.jsp -->
+<!-- sample.jsp -->
 <html xmlns:th="http://www.thymeleaf.org">
 <link href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"></link>
 <link href="css/bootstrap-grid.css" th:href="@{/css/bootstrap-grid.css}" rel="stylesheet"></link>
@@ -9,7 +9,7 @@
 <script src="js/popper.min.js" th:src="@{/js/popper.min.js}"></script>
 
 <head>
-<title>ログイン画面</title>
+<title>会員登録画面</title>
 </head>
 <body>
 
@@ -28,18 +28,17 @@
         </div>
     </nav>
 
-    <h1>ログイン画面</h1>
+    <h1>新規会員登録画面</h1>
 
     <div class="container">
         <form auction="memberRegister" method="post">
             <div class="form-group">
-                <label>名前</label> <input type="text" name="email" class="form-control" />
+                <label>名前</label> <input type="text" name="email" class="form-control" />
             </div>
             <div class="form-group">
-                <label>パスワード</label> <input type="text" name="password" class="form-control" />
+                <label>メールアドレス</label> <input type="text" name="password" class="form-control" />
             </div>
-            <a href="/memberRegister
-            " class="btn btn-primary btn-lg">ログイン</a>
+            <a href="#" class="btn btn-primary btn-lg">確認</a>
         </form>
     </div>
 </body>
