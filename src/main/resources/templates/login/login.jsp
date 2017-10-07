@@ -1,4 +1,5 @@
-  <!-- sample.jsp -->
+
+<!-- sample.jsp -->
 <html xmlns:th="http://www.thymeleaf.org">
 <link href="css/bootstrap.min.css" th:href="@{/css/bootstrap.min.css}" rel="stylesheet"></link>
 <link href="css/bootstrap-grid.css" th:href="@{/css/bootstrap-grid.css}" rel="stylesheet"></link>
@@ -38,8 +39,10 @@
             <div class="form-group">
                 <label>パスワード</label> <input type="text" name="password" class="form-control" />
             </div>
-            <a href="/memberRegister
-            " class="btn btn-primary btn-lg">ログイン</a>
+            <div class="pull-left">
+                <a href="/memberRegister" class="btn btn-primary btn-lg">ログイン</a>
+                <a href="/memberRegister" class="btn btn-danger btn-lg">新規会員登録</a>
+            </div>
         </form>
     </div>
 </body>
