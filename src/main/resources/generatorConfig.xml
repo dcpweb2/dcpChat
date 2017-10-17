@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+    <context id="MySQLTables">
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://127.0.0.1:33060/dcpchat_db?useSSL=false" userId="root" password="pw" />
+        <javaModelGenerator targetPackage="dcp.dcpChat.dto.generated" targetProject="src/main/java/" />
+        <sqlMapGenerator targetPackage="dcp.dcpChat.dto.generated" targetProject="src/main/java/" />
+        <javaClientGenerator targetPackage="dcp.dcpChat.dto.generated" targetProject="src/main/java/" type="ANNOTATEDMAPPER" />
+        <table tableName="%"></table>
+  </context>
+</generatorConfiguration>
