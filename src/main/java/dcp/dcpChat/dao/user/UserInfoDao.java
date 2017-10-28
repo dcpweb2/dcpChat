@@ -17,4 +17,8 @@ public class UserInfoDao extends AbstractUserBaseDao<UserInfoMapper> {
         return getMapper().selectByPrimaryKey(userId);
     }
 
+    public void insertByPrimaryKey(UserInfo userInfo) {
+        getMapper().insert(userInfo);
+    }
+
 }

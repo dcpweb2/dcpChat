@@ -5,6 +5,7 @@ services:
 #開発用mysqlコンテナ(Spider)
   db:
     image: mysql
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci
     ports:
       - "33060:3306"
     volumes_from:
